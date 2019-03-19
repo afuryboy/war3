@@ -1,0 +1,8 @@
+{
+  "name": "war3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/afuryboy/war3.git",
+  "author": "qiankun <qiankun@sensetime.com>",
+  "license": "MIT"
+}
