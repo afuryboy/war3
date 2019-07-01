@@ -5,8 +5,24 @@ const merge = require('webpack-merge')
 const wp_common = require('./webpack.common.js')
 const util = require('./util')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const net = require('net')
+var port = 9001;
 
-const port = '900' + Math.floor(Math.random()*10)
+// function checkPort() {
+//   var server = net.createServer().listen(port,'0.0.0.0')
+//   server.on('listening', function(){
+//     server.close();
+//     console.log('The port【' + port + '】 is available.');
+//   })
+//   server.on('error', function(err){
+//     if(err.code === 'EADDRINUSE') {
+//       console.log('The port【' + port + '】 is occupied, please change other port.')
+//       port++
+//       checkPort()
+//     }
+//   })
+// }
+// checkPort()
 module.exports = merge(wp_common, {
     devtool: 'eval-source-map',
     entry: {

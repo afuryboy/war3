@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.#{$grid-row-flex-cls}{
+  @include make-row-flex();
+}

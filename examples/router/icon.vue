@@ -1,7 +1,7 @@
 <template>
   <div>
     <Icon name="ios-add-circle"></Icon>
-    <Icon name="el-icon-info"></Icon>
+    <Icon name="ios-alert" />
   </div>
 </template>
 <script>

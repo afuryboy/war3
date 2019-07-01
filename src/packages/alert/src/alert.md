@@ -17,3 +17,6 @@ title
 desc
 icon
 close
+
+
+iview 支持定义图标 good

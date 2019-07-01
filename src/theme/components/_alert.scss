@@ -1,0 +1,71 @@
+
+// .#{$transition-name-fade}-enter-active,.#{$transition-name-fade}-leave-active {
+//   transition: all 1s ease;
+// }
+
+.#{$transition-name-fade}-enter-active {
+  animation: bounce-in .5s;
+}
+.#{$transition-name-fade}-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.#{$component-alert} {
+  position: relative;
+  border-radius: $component-alert-border-radius;
+  padding: 8px 16px 8px 16px;
+}
+.#{$component-alert}-icon, .#{$component-alert}-close{
+  position: absolute;
+  display: flex;
+}
+@each $name, $value in $state-type {
+  .#{$component-alert}-#{$name} {
+    border: 1px solid $value;
+    background-color: rgba($value,.2);
+  }
+  .#{$component-alert}-#{$name} .#{$component-alert}-icon {
+    color: lighten($value,5%);
+  }
+}
+
+.#{$component-alert}-with-icon.#{$component-alert}-with-desc {
+  padding: 16px 28px 16px 69px;
+}
+.#{$component-alert}-with-desc {
+  padding: 8px 28px 8px 16px;
+}
+.#{$component-alert}-with-icon .#{$component-alert}-icon{
+  top: 50%;
+  margin-top: -14px;
+  left: 24px;
+  font-size: 28px;
+}
+
+.#{$component-alert}-close{
+  right: 0px;
+  top: 0px;
+  font-size: 28px;
+  margin-top: 3px;
+}
+
+.#{$component-alert}-message,.#{$component-alert}-title {
+  font-size: 14px;
+  color: $gray-900;
+}
+
+.#{$component-alert}-desc {
+  font-size: 12px;
+  color: $gray-700;
+}

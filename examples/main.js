@@ -15,6 +15,10 @@ const router = new Router({
       {
         path: '/icon',
         component: (resolve) => require(['./router/icon.vue'], resolve)
+      },
+      {
+        path: '/row',
+        component: (resolve) => require(['./router/row.vue'], resolve)
       }
     ]
 })
