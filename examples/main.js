@@ -19,6 +19,10 @@ const router = new Router({
       {
         path: '/row',
         component: (resolve) => require(['./router/row.vue'], resolve)
+      },
+      {
+        path: '/message',
+        component: (resolve) => require(['./router/message.vue'], resolve)
       }
     ]
 })
